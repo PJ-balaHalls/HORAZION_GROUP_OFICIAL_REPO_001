@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
-    "@horizion/types": "*",
-    "@horizion/ui": "*",
-    "@horizion/utils": "*",
+    "@horazion/types": "*",
+    "@horazion/ui": "*",
+    "@horazion/utils": "*",
     "@supabase/ssr": "^0.10.2",
     "@supabase/supabase-js": "^2.103.3",
     "@vercel/analytics": "^2.0.1",

@@ -1,4 +1,4 @@
-import { BadgeEmBreve } from "@horizion/ui/components/badge/embreve/badgeembreve";
+import { BadgeEmBreve } from "@horazion/ui/components/badge/embreve/badgeembreve";
 
 export default function Page() {
   return (

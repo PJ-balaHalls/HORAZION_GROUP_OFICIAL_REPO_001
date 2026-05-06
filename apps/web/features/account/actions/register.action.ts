@@ -1,8 +1,8 @@
 "use server";
 
 import { getSupabaseAdminClient } from "@/lib/supabase/client";
-import { RegisterAccountSchema } from "@horizion/types/src/validators/account.schema";
-import type { RegisterAccountInput } from "@horizion/types/src/validators/account.schema";
+import { RegisterAccountSchema } from "@horazion/types/src/validators/account.schema";
+import type { RegisterAccountInput } from "@horazion/types/src/validators/account.schema";
 
 // ─── Response types ───────────────────────────────────────────────────────────
 
@@ -186,7 +186,7 @@ export async function checkHorizonIdAvailability(
   if (!horizonId || horizonId.length < 3) return { available: false, message: "Mínimo 3 caracteres." };
   if (!/^[a-z0-9_.]+$/.test(horizonId)) return { available: false, message: "Apenas letras minúsculas, números, _ e ." };
 
-  const RESERVED = ["admin", "horazion", "horizion", "suporte", "system", "horazion_core"];
+  const RESERVED = ["admin", "horazion", "horazion", "suporte", "system", "horazion_core"];
   if (RESERVED.includes(horizonId.toLowerCase())) return { available: false, message: "Este ID está reservado." };
 
   try {

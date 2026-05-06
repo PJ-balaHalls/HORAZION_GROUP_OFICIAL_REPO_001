@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@horizion/ui", "@horizion/types", "@horizion/utils"],
+  transpilePackages: ["@horazion/ui", "@horazion/types", "@horazion/utils"],
 };
 export default nextConfig;

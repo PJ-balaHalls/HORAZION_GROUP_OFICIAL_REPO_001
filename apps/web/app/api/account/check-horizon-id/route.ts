@@ -23,7 +23,7 @@ function checkRateLimit(ip: string, maxRequests = 30, windowMs = 60_000): boolea
 // ─── Reserved IDs ─────────────────────────────────────────────────────────────
 
 const RESERVED_IDS = new Set([
-  "admin", "horazion", "horizion", "suporte", "support",
+  "admin", "horazion", "horazion", "suporte", "support",
   "api", "www", "mail", "root", "system", "horazion_group",
   "horazion_core", "horaziongroup", "help", "info", "contact",
   "security", "abuse", "noreply", "no-reply", "billing", "pay",

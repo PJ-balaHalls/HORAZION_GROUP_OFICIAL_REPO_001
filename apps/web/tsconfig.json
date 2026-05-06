@@ -26,13 +26,13 @@
       "@/*": [
         "./*"
       ],
-      "@horizion/ui/*": [
+      "@horazion/ui/*": [
         "../../packages/ui/*"
       ],
-      "@horizion/types/*": [
+      "@horazion/types/*": [
         "../../packages/types/*"
       ],
-      "@horizion/utils/*": [
+      "@horazion/utils/*": [
         "../../packages/utils/*"
       ]
     }

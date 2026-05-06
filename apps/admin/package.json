@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@horizion/types": "*",
-    "@horizion/ui": "*",
-    "@horizion/utils": "*",
+    "@horazion/types": "*",
+    "@horazion/ui": "*",
+    "@horazion/utils": "*",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",

@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Loader2, ArrowRight } from 'lucide-react';
 // IMPORTAÇÃO CORRIGIDA: Utilizando o alias oficial do monorepo Horazion
-import { Button } from '@horizion/ui/components/button/button';
+import { Button } from '@horazion/ui/components/button/button';
 
 export function AdminLoginForm() {
   const router = useRouter();

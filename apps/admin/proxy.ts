@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 // O Next.js Turbopack exige o export da função como padrão no proxy
 export default async function proxy(request: NextRequest) {
   // Acesso seguro aos cookies HTTP-only
-  const token = request.cookies.get('horizion_admin_session');
+  const token = request.cookies.get('horazion_admin_session');
   const { pathname } = request.nextUrl;
 
   // Libera rotas estáticas, assets, e a própria rota de login

@@ -3,7 +3,7 @@ import { create } from 'zustand';
 export type AccountType = 'education' | 'individual' | 'enterprise';
 
 export interface RegisterPayload {
-  horizionId: string;
+  horazionId: string;
   email: string;
   firstName: string;
   lastName: string;
@@ -22,7 +22,7 @@ interface RegisterState {
 }
 
 const initialState: RegisterPayload = {
-  horizionId: '', email: '', firstName: '', lastName: '', document: '', accountType: 'education', consentAgreed: false
+  horazionId: '', email: '', firstName: '', lastName: '', document: '', accountType: 'education', consentAgreed: false
 };
 
 export const useRegisterStore = create<RegisterState>((set, get) => ({

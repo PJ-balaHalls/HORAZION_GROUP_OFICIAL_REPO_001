@@ -10,7 +10,7 @@ import { ArrowLeft } from 'lucide-react';
 
 import { RegisterFlow } from '@/features/account/components/register/register-flow';
 import { RegisterTicketPreview } from '@/features/account/components/register/register-ticket-preview';
-import { RegisterAccountSchema, type RegisterAccountInput } from '@horizion/types/src/validators/account.schema';
+import { RegisterAccountSchema, type RegisterAccountInput } from '@horazion/types/src/validators/account.schema';
 import { registerNewUser, type RegisterSuccessPayload } from '@/features/account/actions/register.action';
 
 export default function RegisterPage() {

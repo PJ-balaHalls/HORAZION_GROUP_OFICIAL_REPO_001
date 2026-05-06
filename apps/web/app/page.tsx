@@ -1,7 +1,7 @@
 "use client";
 
 import { Header } from "@/components/layout/header";
-import { BadgeNovo } from "@horizion/ui/components/badge/novo/badgenovo";
+import { BadgeNovo } from "@horazion/ui/components/badge/novo/badgenovo";
 
 export default function HomePage() {
   return (

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "@horizion/ui/globals.css";
-import { HorizonProvider } from "@horizion/ui/providers/horizon-provider";
-import { CookieConsentDrawer } from "@horizion/ui/components/consent/cookie-drawer";
-import { AccessibilityTrigger } from "@horizion/ui/components/accessibility/accessibility-trigger";
+import "@horazion/ui/globals.css";
+import { HorizonProvider } from "@horazion/ui/providers/horizon-provider";
+import { CookieConsentDrawer } from "@horazion/ui/components/consent/cookie-drawer";
+import { AccessibilityTrigger } from "@horazion/ui/components/accessibility/accessibility-trigger";
 
 // Importações para Analytics e Performance da Vercel
 import { Analytics } from "@vercel/analytics/next"
