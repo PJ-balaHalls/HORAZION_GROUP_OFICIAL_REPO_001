@@ -1,5 +1,5 @@
 "use client";
-import { useHorizonClarity } from "../../../providers/horizon-provider";
+import { useHorizonClarity } from "../../../providers/horazion-provider";
 import { Button } from "../../button/button"; // <-- CORRIGIDO: Dois níveis para cima
 
 export function TypographySettings() {

@@ -1,0 +1,7 @@
+/* apps/storybook/.storybook/storybook-fonts.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Força a fonte oficial do Horazion no canvas do Storybook */
+body, .docs-story {
+  font-family: 'Inter', sans-serif !important;
+}

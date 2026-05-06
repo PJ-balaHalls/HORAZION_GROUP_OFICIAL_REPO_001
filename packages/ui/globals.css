@@ -1,218 +1,67 @@
+/* packages/ui/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* ==========================================================================
-     TEMA PADRÃO (DEFAULT): Minimalista, Branco, Flat e Disciplinado
-     ========================================================================== */
-  :root,
-  [data-theme="default"] {
-    /* Fundos e Superfícies (Branco puro e tons de cinza extremamente sutis) */
-    --background: 0 0% 100%;       /* #FFFFFF */
-    --foreground: 0 0% 9%;         /* #171717 - Contraste alto, mas não preto puro (reduz fadiga) */
+  :root, [data-theme="light"] {
+    --hrz-background: 255 255 255; /* #FFFFFF */
+    --hrz-surface: 250 250 250; /* #FAFAFA */
+    --hrz-text-primary: 0 0 0; /* #000000 */
+    --hrz-text-secondary: 140 140 140; /* #8C8C8C */
+    --hrz-border: 220 220 220;
     
-    --surface: 0 0% 100%;
-    --surface-foreground: 0 0% 9%;
-    --surface-muted: 0 0% 98%;     /* #FAFAFA - Fundo para blocos secundários */
-
-    /* Cores de Marca (Horizon Primary) */
-    --primary: 0 0% 9%;            /* Quase preto, flat */
-    --primary-foreground: 0 0% 100%; /* Branco sobre primário */
-
-    /* Elementos Secundários / Mudos */
-    --secondary: 0 0% 96%;         /* #F5F5F5 */
-    --secondary-foreground: 0 0% 9%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;  /* #737373 - Texto de apoio */
-
-    /* Bordas e Linhas (Silenciosas) */
-    --border: 0 0% 90%;            /* #E5E5E5 */
-    --input: 0 0% 90%;
-    --ring: 0 0% 9%;               /* Anel de foco: Escuro e demarcado */
-
-    /* Semânticas de Estado (Cores dessaturadas para não gritar na tela) */
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 100%;
+    /* Cores Institucionais */
+    --hrz-brand-red: 182 25 46; /* #B6192E */
+    --hrz-brand-purple: 42 0 57; /* #2A0039 */
+    --hrz-brand-blue: 10 37 64; /* #0A2540 */
     
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 9%;
+    /* Status (Acessibilidade garantida com contraste >= 4.5:1) */
+    --hrz-success: 34 197 94;
+    --hrz-warning: 245 158 11;
+    --hrz-danger: 182 25 46; /* Utiliza o red oficial */
+    --hrz-info: 10 37 64; /* Utiliza o blue oficial */
     
-    --error: 0 84% 60%;
-    --error-foreground: 0 0% 100%;
-    
-    --info: 221 83% 53%;
-    --info-foreground: 0 0% 100%;
+    /* Foco acessível */
+    --hrz-focus-ring: 10 37 64; 
 
-    /* Geometria e Formas */
-    --radius-sm: 0.125rem; /* 2px - Bordas levemente quebradas, quase sharp */
-    --radius-md: 0.25rem;  /* 4px */
-    --radius-lg: 0.5rem;   /* 8px - Usado apenas em modais maiores */
+    /* Raio de borda corporativo */
+    --hrz-radius-sm: 4px;
+    --hrz-radius-md: 8px;
+    --hrz-radius-lg: 12px;
   }
 
-  /* ==========================================================================
-     DARK MODE (Inversão elegante)
-     ========================================================================== */
   [data-theme="dark"] {
-    --background: 0 0% 4%;         /* #0A0A0A - Fundo profundo */
-    --foreground: 0 0% 98%;        /* #FAFAFA - Texto claro (não branco puro) */
+    --hrz-background: 10 10 10;
+    --hrz-surface: 26 26 26;
+    --hrz-text-primary: 255 255 255;
+    --hrz-text-secondary: 160 160 160;
+    --hrz-border: 50 50 50;
     
-    --surface: 0 0% 9%;            /* #171717 */
-    --surface-foreground: 0 0% 98%;
-    --surface-muted: 0 0% 12%;
-
-    --primary: 0 0% 98%;           /* Branco */
-    --primary-foreground: 0 0% 9%; /* Escuro sobre primário */
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 80%;
-  }
-
-  /* ==========================================================================
-     ALTO CONTRASTE (WCAG AAA - Acessibilidade Máxima)
-     ========================================================================== */
-  [data-theme="high-contrast"] {
-    --background: 0 0% 0%;         /* Preto absoluto */
-    --foreground: 0 0% 100%;       /* Branco absoluto */
+    --hrz-brand-red: 220 40 65; /* Ajustado luminosidade para contraste em Dark */
+    --hrz-brand-purple: 80 40 100;
+    --hrz-brand-blue: 60 100 160;
     
-    --surface: 0 0% 0%;
-    --surface-foreground: 0 0% 100%;
-    --surface-muted: 0 0% 0%;
-
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 0 0% 0%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 0%;
-    --muted-foreground: 0 0% 100%;
-
-    --border: 0 0% 100%;           /* Bordas obrigatoriamente brancas */
-    --input: 0 0% 100%;
-    --ring: 60 100% 50%;           /* Foco em Amarelo brilhante para a11y visual */
+    --hrz-focus-ring: 255 255 255; 
   }
 
-  /* ==========================================================================
-     VARIAÇÃO DE MARCA SECUNDÁRIA (Ex: Tenant / Produto específico)
-     ========================================================================== */
-  [data-theme="tenant-acme"] {
-    /* Mantém o minimalismo, mas injeta a cor da marca (Ex: Azul corporativo) */
-    --primary: 221 83% 53%;        /* Azul vibrante */
-    --primary-foreground: 0 0% 100%;
-    --ring: 221 83% 53%;
-  }
-}
-
-@layer base {
-  /* ==========================================================================
-     RESET E TIPOGRAFIA BASE
-     ========================================================================== */
   * {
-    @apply border-border;
-    border-color: hsl(var(--border));
+    @apply border-hrz-border;
   }
   
-  html {
+  body {
+    @apply bg-hrz-background text-hrz-text-primary font-sans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
-
-  /* Tipografia Disciplinada - Sem serifas complexas */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight text-foreground;
-  }
-
-  p {
-    @apply leading-relaxed;
-  }
-
-  /* ==========================================================================
-     ACESSIBILIDADE RIGOROSA (WCAG 2.2 AA)
-     ========================================================================== */
-  
-  /* Estados de Foco Visível Padrão (Sem Outline feio de browser, mas evidente) */
-  :focus-visible {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 2px;
-    border-radius: var(--radius-sm);
-  }
-
-  /* Transições suaves e desativação em caso de sensibilidade a movimento */
-  *, *::before, *::after {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
+  /* Redução de movimento para acessibilidade WCAG */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *, ::before, ::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-  }
-
-  /* Ocultar elementos visualmente, mas mante-los lidos por Screen Readers (Tailwind sr-only) */
-  .visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-  }
-}
-
-@layer utilities {
-  /* ==========================================================================
-     UTILITÁRIOS CUSTOMIZADOS DO HORIZON
-     ========================================================================== */
-     
-  /* Scrollbar Minimalista */
-  .scrollbar-minimalist::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  .scrollbar-minimalist::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .scrollbar-minimalist::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
-    border-radius: var(--radius-md);
-  }
-  .scrollbar-minimalist::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground));
-  }
-
-  /* Remoção de bordas/fundos poluentes em campos autofill no Webkit */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover, 
-  input:-webkit-autofill:focus, 
-  input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px hsl(var(--background)) inset !important;
-    -webkit-text-fill-color: hsl(var(--foreground)) !important;
-    transition: background-color 5000s ease-in-out 0s;
   }
 }

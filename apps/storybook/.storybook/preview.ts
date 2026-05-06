@@ -1,10 +1,8 @@
 // apps/storybook/.storybook/preview.ts
 import type { Preview } from "@storybook/react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
-
-// Importação do CSS global consolidado (Tokens DTCG gerados + base)
-// Ajuste o caminho de acordo com o build de estilo final do seu monorepo
-import '../../../packages/ui/globals.css'; 
+import "../../../packages/ui/globals.css"; // Importa os tokens CSS injetados
+import "./storybook-fonts.css"; // Configuração da fonte Inter
 
 const preview: Preview = {
   parameters: {
@@ -15,31 +13,44 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+      toc: true, // Habilita Table of Contents nativo (Nível Enterprise)
+    },
     options: {
       storySort: {
-        // Força a página "Introdução" a ser a página aberta por padrão
-        order: ['Introdução', 'Fundamentos', ['Cores', 'Tipografia', 'Espaçamento'], 'Componentes'],
+        order: ['Fundação', ['Princípios', 'Cores', 'Tipografia', 'Design Tokens'], 'Componentes'],
       },
+    },
+    a11y: {
+      config: {
+        rules: [
+          { id: 'color-contrast', enabled: true },
+        ],
+      },
+    },
+    backgrounds: {
+      disable: true, // Desabilitado para focar no background gerado pelo tema
     },
   },
   decorators: [
-    // Engine Avançada de Temas: injeta os atributos na tag <html> ou <body> do iframe
+    // Injeção de Tema e Motion no nível raiz do Storybook
     withThemeByDataAttribute({
       themes: {
-        default: 'default',
-        'tenant-acme': 'tenant-acme',
-        'event-copa': 'event-copa',
-        dark: 'dark',
-        'high-contrast': 'high-contrast',
+        claro: "light",
+        escuro: "dark",
+        "alto-contraste": "high-contrast",
+        "tenant-acme": "tenant-acme",
       },
-      defaultTheme: 'default',
-      attributeName: 'data-theme',
+      defaultTheme: "claro",
+      attributeName: "data-theme",
     }),
-    (Story, context) => {
-      // Decorator base para envolver todos os componentes
-      // Útil caso o @horizon/theme possua um <ThemeProvider> genérico
-      return Story();
-    }
+    (Story) => (
+      // Container base que garante que os estilos globais sejam aplicados
+      // e respeita a preferência de acessibilidade do sistema do usuário
+      `<div className="horazion-root antialiased font-sans text-hrz-text-primary bg-hrz-background min-h-screen">
+        <Story />
+      </div>`
+    ),
   ],
 };
 

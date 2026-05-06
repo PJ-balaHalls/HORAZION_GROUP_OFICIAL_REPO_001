@@ -1,13 +1,20 @@
 {
   "name": "horazion-monorepo",
-  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspaces",
-    "storybook": "npm run dev --workspace=@horazion/storybook"
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "storybook": "turbo storybook",
+    "tokens:build": "workspace @horazion/tokens build"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0"
   }
 }

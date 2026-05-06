@@ -1,1 +1,17 @@
-{}
+{
+  "color": {
+    "white": { "$value": "#ffffff", "$type": "color" },
+    "black": { "$value": "#000000", "$type": "color" },
+    "horazion": {
+      "red": {
+        "50": { "$value": "#fef2f2", "$type": "color" },
+        "500": { "$value": "#ef4444", "$type": "color", "$source": "Brand Official" },
+        "900": { "$value": "#7f1d1d", "$type": "color" }
+      },
+      "slate": {
+        "50": { "$value": "#f8fafc", "$type": "color" },
+        "900": { "$value": "#0f172a", "$type": "color" }
+      }
+    }
+  }
+}
