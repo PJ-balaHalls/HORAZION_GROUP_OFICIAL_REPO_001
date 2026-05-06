@@ -1,20 +1,22 @@
 {
-  "name": "storybook-app",
+  "name": "@horizon/storybook",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build:storybook": "storybook build",
-    "test:a11y": "test-storybook --url http://localhost:6006",
-    "chromatic": "chromatic --project-token=SEU_TOKEN"
+    "build": "storybook build",
+    "test:a11y": "test-storybook"
   },
   "dependencies": {
-    "@horizon/ui": "*",
-    "@horizon/theme": "*",
-    "@horizon/tokens": "*"
+    "@horizon/ui": "workspace:*",
+    "@horizon/theme": "workspace:*",
+    "@horizon/tokens": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^8.0.0",
+    "@storybook/addon-docs": "^8.0.0",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
@@ -23,10 +25,8 @@
     "@storybook/react": "^8.0.0",
     "@storybook/react-vite": "^8.0.0",
     "@storybook/test": "^8.0.0",
-    "chromatic": "^11.0.0",
     "storybook": "^8.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "storybook-addon-performance": "^0.17.1",
     "vite": "^5.0.0"
   }
 }
