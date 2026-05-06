@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* [FE-HZ] Tipografia Local (Inter Variable) */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  :root {
+    /* Tema Claro (Default) */
+    --bg-primary: #FFFFFF;
+    --bg-surface: #F8F9FA;
+    --text-primary: #000000;
+    --text-secondary: #5F6368;
+    --border-color: #E0E0E0;
+    --brand-color: #B6192E;
+
+    /* Variáveis de atalho mapeadas no Tailwind Config */
+    --color-background: var(--bg-primary);
+    --color-surface: var(--bg-surface);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border-color);
+    --color-brand: var(--brand-color);
+  }
+
+  [data-theme="black"] {
+    --bg-primary: #121212;
+    --bg-surface: #1E1E1E;
+    --text-primary: #FFFFFF;
+    --text-secondary: #BDBDBD;
+    --border-color: #333333;
+    --brand-color: #D32F2F;
+    --color-background: var(--bg-primary);
+    --color-surface: var(--bg-surface);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border-color);
+    --color-brand: var(--brand-color);
+  }
+
+  [data-theme="gray"] {
+    --bg-primary: #F5F5F5;
+    --bg-surface: #EEEEEE;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --border-color: #BDBDBD;
+    --brand-color: #B6192E; 
+    --color-background: var(--bg-primary);
+    --color-surface: var(--bg-surface);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border-color);
+    --color-brand: var(--brand-color);
+  }
+
+  [data-theme="autism"] {
+    --bg-primary: #FDFDFD;
+    --bg-surface: #F3F4F6;
+    --text-primary: #374151;
+    --text-secondary: #6B7280;
+    --brand-color: #9B1527;
+    --color-background: var(--bg-primary);
+    --color-surface: var(--bg-surface);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border-color);
+    --color-brand: var(--brand-color);
+  }
+
+  /* Modificadores de Acessibilidade */
+  [data-text-size="small"] { font-size: 14px; }
+  [data-text-size="large"] { font-size: 18px; }
+
+  [data-dyslexia="true"] {
+    font-family: "OpenDyslexic", "Comic Sans MS", sans-serif;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    line-height: 1.65;
+  }
+
+  [data-daltonism="true"] {
+    --border-color: #000000;
+    --color-border: #000000;
+  }
+  
+  [data-daltonism="true"] a { text-decoration: underline; }
+  [data-daltonism="true"] .badge-status { border-width: 2px; border-style: solid; }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ─── Horizon Clarity: Clean White Admin ─── */
+    --bg-primary: #FFFFFF;
+    --bg-surface: #F8F9FA;
+    --text-primary: #000000;
+    --text-secondary: #5F6368;
+    --border-color: #E0E0E0;
+    --brand-color: #B6192E;
+    --color-background: var(--bg-primary);
+    --color-surface: var(--bg-surface);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border-color);
+    --color-brand: var(--brand-color);
+    --color-hrz-red: #B6192E;
+    --color-hrz-purple: #2A0039;
+    --color-hrz-blue: #0A2540;
+    /* ─── Shadcn Sidebar CSS Variables ─── */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-width: 16rem;
+    --sidebar-width-icon: 3.5rem;
+  }
+
+  [data-theme="black"] {
+    --bg-primary: #121212; --bg-surface: #1E1E1E;
+    --text-primary: #FFFFFF; --text-secondary: #BDBDBD;
+    --border-color: #333333; --brand-color: #D32F2F;
+    --color-background: var(--bg-primary); --color-surface: var(--bg-surface);
+    --color-text-primary: var(--text-primary); --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border-color); --color-brand: var(--brand-color);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── Scrollbar custom ─── */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-text-secondary); }
+}

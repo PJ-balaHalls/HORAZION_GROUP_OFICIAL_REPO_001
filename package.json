@@ -1,0 +1,8 @@
+{
+  "name": "horizon-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
