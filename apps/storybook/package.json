@@ -1,5 +1,5 @@
 {
-  "name": "@horizon/storybook",
+  "name": "@horazion/storybook",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,9 +8,11 @@
     "test:a11y": "test-storybook"
   },
   "dependencies": {
-    "@horizon/ui": "workspace:*",
-    "@horizon/theme": "workspace:*",
-    "@horizon/tokens": "workspace:*",
+    "@horazion/ui": "*",
+    "@horazion/theme": "*",
+    "@horazion/tokens": "*",
+    "@horazion/types": "*",
+    "@horazion/utils": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,7 +28,6 @@
     "@storybook/react-vite": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "storybook": "^8.0.0",
-    "storybook-addon-performance": "^0.17.1",
     "vite": "^5.0.0"
   }
 }

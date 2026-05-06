@@ -1,8 +1,13 @@
 {
-  "name": "horizon-monorepo",
+  "name": "horazion-monorepo",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "storybook": "npm run dev --workspace=@horazion/storybook"
+  }
 }

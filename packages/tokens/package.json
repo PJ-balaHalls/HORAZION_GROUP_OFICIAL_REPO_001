@@ -1,7 +1,7 @@
+
 {
-  "name": "@horizon/tokens",
+  "name": "@horazion/tokens",
   "version": "1.0.0",
   "private": true,
-  "main": "src/index.ts",
-  "dependencies": {}
+  "main": "index.ts"
 }
